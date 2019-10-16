@@ -1,23 +1,25 @@
-<div class="content">
-  <u><h2 id="NinjaH1" style="padding-left:20px;">THESE ARE THE CHOSEN NINJAS</h2></u>
-  <button type="button" ng-click="order = '-rate'">Order by rate</button>
-  <button type="button" ng-click="order = 'name'">Order by name</button>
-<input id='textBoxStyle' type="text" ng-model="search" placeholder="Search for Ninja here...">
+<div class="container">
+  <div class="content">
+    <u><h2 id="NinjaH1" style="padding-left:20px;">THESE ARE THE CHOSEN NINJAS</h2></u>
+    <button type="button" ng-click="order = '-rate'">Order by rate</button>
+    <button type="button" ng-click="order = 'name'">Order by name</button>
+  <input id='textBoxStyle' type="text" ng-model="search" placeholder="Search for Ninja here...">
 
-<ul>
-  <li ng-repeat='ninja in Ninjas | filter: search | orderBy: order'>
-    <img  ng-src="{{ninja.thumb}}" style="margin: -12px 10px 0 0; float:left; width:50px; border-radius:50px"
-    ng-show="ninja.thumb"/>
-    <h3>{{ninja.name}} - Rate:{{ninja.rate |  currency: '$ '}}</h3>
-    <div class="remove" ng-click="removeNinja(ninja)"><strong>X</strong></div>
-    <span class="belt" style="background:{{ninja.belt}}">{{ninja.belt}} belt</span>
-  </li>
-</ul>
+  <ul>
+    <li ng-repeat='ninja in Ninjas | filter: search | orderBy: order'>
+      <img  ng-src="{{ninja.thumb}}" style="margin: -12px 10px 0 0; float:left; width:50px; border-radius:50px"
+      ng-show="ninja.thumb"/>
+      <h3>{{ninja.name}} - Rate:{{ninja.rate |  currency: '$ '}}</h3>
+      <div class="remove" ng-click="removeNinja(ninja)"><strong>X</strong></div>
+      <span class="belt" style="background:{{ninja.belt}}">{{ninja.belt}} belt</span>
+    </li>
+  </ul>
 
-<form ng-submit='addNinja()'>
-  <input type="text" placeholder="name" ng-model="newNinja.name">
-  <input type="text" placeholder="belt" ng-model="newNinja.belt">
-  <input type="text" placeholder="rate" ng-model="newNinja.rate">
-  <input type="submit"  value="Add new Ninja">
-</form>
+  <form ng-submit='addNinja()'>
+    <input type="text" placeholder="name" ng-model="newNinja.name">
+    <input type="text" placeholder="belt" ng-model="newNinja.belt">
+    <input type="text" placeholder="rate" ng-model="newNinja.rate">
+    <input type="submit"  value="Add new Ninja">
+  </form>
+  </div>
 </div>

@@ -1,0 +1,31 @@
+[{
+	"name": "Yoshi",
+	"belt": "Green",
+	"rate": 50,
+	"thumb": "content/Images/Yosi.jpg"
+}, {
+	"name": "Crystal",
+	"belt": "Yellow",
+	"rate": 60,
+	"thumb": "content/Images/Crystal.jpeg"
+}, {
+	"name": "Ryu",
+	"belt": "Brown",
+	"rate": 500,
+	"thumb": "content/Images/Ryu.png"
+}, {
+	"name": "Nick",
+	"belt": "Purple",
+	"rate": 2000,
+	"thumb": "content/Images/Nick.jpg"
+}, {
+	"name": "David",
+	"belt": "Black",
+	"rate": 800,
+	"thumb": "content/Images/David.png"
+}, {
+	"name": "Blessing",
+	"belt": "Black",
+	"rate": 10000,
+	"thumb": "content/Images/Blessing.jpeg"
+}]

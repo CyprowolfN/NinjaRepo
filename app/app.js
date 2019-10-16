@@ -18,7 +18,7 @@ myApp.config(["$routeProvider", function($routeProvider){
 }]);
 
 
-myApp.controller('NinjaCtrl',['$scope', function($scope){
+myApp.controller('NinjaCtrl',['$scope','$http', function($scope,$http){
 
     $scope.removeNinja = function(ninja){
       let removedNinja = $scope.Ninjas.indexOf(ninja);
@@ -34,47 +34,14 @@ myApp.controller('NinjaCtrl',['$scope', function($scope){
         $scope.newNinja.name = '';
         $scope.newNinja.belt = '';
         $scope.newNinja.rate = '';
-    }
+    };
 
-    $scope.Ninjas = [
-      {
-        name:'Yoshi',
-        belt:'Green',
-        rate: 50,
-        thumb:"content/Images/Yosi.jpg"
-      },
-      {
-        name:'Crystal',
-        belt:'Yellow',
-        rate: 60,
-        thumb:"content/Images/Crystal.jpeg"
-      },
-      {
-        name:'Ryu',
-        belt:'Brown',
-        rate: 500,
-        thumb:"content/Images/Ryu.png"
-      },
-      {
-        name:'Nick',
-        belt:'Purple',
-        rate: 2000,
-        thumb:"content/Images/Nick.jpg"
-      },
-      {
-        name:'David',
-        belt:'Black',
-        rate: 800,
-        thumb:"content/Images/David.png"
-      },
-      {
-        name:'Blessing',
-        belt:'Black',
-        rate: 10000,
-        thumb:"content/Images/Blessing.jpeg"
-      }
-    ];
+      $http.get('data/ninjas.json')
+      .success(function(data){
+          $scope.Ninjas = data;
+      });
 
-    console.log(angular.toJson($scope.Ninjas));
+    //This is simply for turning the array into a json
+    //console.log(angular.toJson($scope.Ninjas));
 
 }]);
