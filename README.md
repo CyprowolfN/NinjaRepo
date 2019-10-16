@@ -1,0 +1,2 @@
+# NinjaRepo
+Ninja Directory
