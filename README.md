@@ -1,2 +1,1 @@
-# NinjaRepo
-Ninja Directory
+Hello Ninja
